@@ -1,0 +1,11 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+body {
+	padding-top: 56px;
+}
+
+.btn {
+	border-radius: 0px;
+}

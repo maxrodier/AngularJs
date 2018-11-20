@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Application</title>
+
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.5.0/css/solid.css" />
+	<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.5.0/css/brand.css" />
+	<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.5.0/css/fontawesome.css" />
+	<script type="text/javascript" src="/webjars/angularjs/1.7.5/angular.js"></script>
+	<script type="text/javascript" src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="resources/css/login.css" />
+	<script type="text/javascript" src="resources/js/login.js"></script>
+</head>
+
+<body ng-app="app">
+	<div ng-controller="Controller as controller">
+		<nav class="navbar fixed-top navbar-dark" style="background-color: #1c2127">
+			<a class="navbar-brand" href="/">Contact Billing Pod Deployment Tool</a>
+		</nav>
+		<div class="container-login">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<form role="form" class="form-login" ng-submit="controller.login()">
+							<p style="padding-bottom:10px; color:red;" ng-show="controller.error == 'true'">Login attempt failed!</p>
+							<div class="form-group">
+								<input type="text" placeholder="username" class="form-control" ng-model="controller.credentials.username" />
+								<input type="password" placeholder="password" class="form-control" ng-model="controller.credentials.password" />
+							</div>
+							<button type="submit" class="btn btn-lg btn-block">Sign In</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
